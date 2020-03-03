@@ -35,9 +35,9 @@ void runMacroMC(bool local=true, bool full=true){
 
   if(local) {
     TChain *chain = new TChain("aodTree");
-    chain->Add("/home/alidock/sim/pp_5_tev_019.root");
-    chain->Add("/home/alidock/sim/pp_5_tev_022.root");
-    chain->Add("/home/alidock/sim/pp_5_tev_025.root");
+    chain->Add("/Users/ryan/alice/sim/pp_5_tev_019.root");
+    chain->Add("/Users/ryan/alice/sim/pp_5_tev_022.root");
+    chain->Add("/Users/ryan/alice/sim/pp_5_tev_025.root");
     manage->StartAnalysis("local", chain);
   }
 
@@ -81,7 +81,7 @@ void runMacroMC(bool local=true, bool full=true){
 
     // define the output folders
     alienHandler->SetGridWorkingDir("StrangeMC");
-    alienHandler->SetGridOutputDir("24-02-2020_test_2");
+    alienHandler->SetGridOutputDir("test");
 
     // connect the alien plugin to the manager
     manage->SetGridHandler(alienHandler);

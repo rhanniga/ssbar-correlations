@@ -323,7 +323,7 @@ void MCTask::UserExec(Option_t *){
 
     MakeTripleCor(triggerList, lambdaList, kPlusList, triple_Cor);
     if(triggerList.size() == 1) {
-        MakeFixedTripleCor(triggerList[0], lambdaList, kPlusList, triple_Cor);
+        MakeFixedTripleCor(triggerList[0], lambdaList, kPlusList, fixedTriple_Cor);
     }
 
     // Count number of triggers/lambdas/kaons in event

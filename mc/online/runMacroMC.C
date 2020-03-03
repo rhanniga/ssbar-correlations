@@ -77,11 +77,11 @@ void runMacroMC(bool local=true, bool full=true){
     // to collect final results
     alienHandler->SetMaxMergeFiles(15);
     alienHandler->SetMaxMergeStages(7);
-    alienHandler->SetMergeViaJDL(false);
+    alienHandler->SetMergeViaJDL(true);
 
     // define the output folders
     alienHandler->SetGridWorkingDir("StrangeMC");
-    alienHandler->SetGridOutputDir("test");
+    alienHandler->SetGridOutputDir("03-02-2020_fix_triple_cor");
 
     // connect the alien plugin to the manager
     manage->SetGridHandler(alienHandler);

@@ -58,7 +58,7 @@ void runMacroMC(bool local=true, bool full=true){
     alienHandler->SetDataPattern("/AOD209/*/*AOD.root");
 
     // addding runs
-    int runArray[1] = {282031};
+    int runArray[1] = {282008};
 
        for(int i = 0; i < 1; i++) {
      alienHandler->AddRunNumber(runArray[i]);
@@ -80,8 +80,8 @@ void runMacroMC(bool local=true, bool full=true){
     alienHandler->SetMergeViaJDL(true);
 
     // define the output folders
-    alienHandler->SetGridWorkingDir("StrangeMC");
-    alienHandler->SetGridOutputDir("03-02-2020_fix_triple_cor");
+    alienHandler->SetGridWorkingDir("retest");
+    alienHandler->SetGridOutputDir("test");
 
     // connect the alien plugin to the manager
     manage->SetGridHandler(alienHandler);

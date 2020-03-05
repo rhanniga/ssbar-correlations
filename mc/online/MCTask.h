@@ -16,7 +16,7 @@ static TString defaultName = "MCTask";
 class MCTask : public AliAnalysisTaskSE {
 public:
 
-    MCTask(const char *name = defaultName.Data(), float trigPtLow = 4, float trigPtHigh = 8);
+    MCTask(const char *name = defaultName.Data(), float trigPtLow = 0, float trigPtHigh = 12);
     virtual void   UserCreateOutputObjects();
     virtual void   UserExec(Option_t *option);
     virtual void   Terminate(Option_t *);

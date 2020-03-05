@@ -20,7 +20,7 @@ void MCTask::UserCreateOutputObjects(){
     double low_array[4]     = {0, 0, -pi/2, -4};
     double high_array[4]    = {12, 12, 3*pi/2, 4};
 
-    int triple_cor_bin_array[6] = {12, 120, 16, 120, 32, 32};
+    int triple_cor_bin_array[6] = {24, 120, 32, 120, 32, 32};
     double triple_cor_low_array[6] = {0, 0, -pi/2, 0, -pi/2, -4};
     double triple_cor_high_array[6] = {12, 12, 3*pi/2, 12, 3*pi/2, 4};
 
@@ -45,8 +45,8 @@ void MCTask::UserCreateOutputObjects(){
     kk_outJet_Cor     = new THnSparseF("kk_outJet_Cor", "Kaon-Kaon out of Jet Correlation", 4, bin_array, low_array, high_array);
     kk_Rand_Cor       = new THnSparseF("kk_Rand_Cor", "Random Kaon-Kaon Correlation", 4, bin_array, low_array, high_array);
     trig_Cor          = new THnSparseF("trig_Cor", "Trigger-trigger correlation", 4, bin_array, low_array, high_array);
-    triple_Cor        = new THnSparseF("triple_Cor", "Triple correlation", 4, triple_cor_bin_array, triple_cor_low_array, triple_cor_high_array);
-    fixedTriple_Cor   = new THnSparseF("fixedTriple_Cor", "Fixed trigger triple correlation", 4, triple_cor_bin_array, triple_cor_low_array, triple_cor_high_array);
+    triple_Cor        = new THnSparseF("triple_Cor", "Triple correlation", 6, triple_cor_bin_array, triple_cor_low_array, triple_cor_high_array);
+    fixedTriple_Cor   = new THnSparseF("fixedTriple_Cor", "Fixed trigger triple correlation", 6, triple_cor_bin_array, triple_cor_low_array, triple_cor_high_array);
 
     // Particle per event distributions
     lambdaEvent               = new TH1I("lambdaEvent", "Lambdas in Event", 10, 0, 10);

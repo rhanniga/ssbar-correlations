@@ -341,8 +341,8 @@ void AliAnalysisTaskStrangeCor::UserExec(Option_t*)
         }
 
         //Filter for associated particles
-        if(true) {
-
+        bool assocFilter = track->TestFilterBit(AliAODTrack::kTrkGlobalNoDCA);
+        if(assocFilter) {
             if(track->Pt() > 0.5 && TMath::Abs(track->Eta()) < 1) {
 
                 associated_h_list.push_back(track);
